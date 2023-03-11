@@ -80,6 +80,7 @@ export class MovieCollection extends BasicStreamableCollection<Movie> {
     this.collection.forEach((movie) => {
       if (genre.search(movie.getGenre()) == -1) genre += movie.getGenre() + " ";
     });
+    genre = genre.substring(0, genre.length - 1);
     return genre;
   }
 
@@ -92,6 +93,7 @@ export class MovieCollection extends BasicStreamableCollection<Movie> {
     this.collection.forEach((movie) => {
       title += movie.getTitle() + " ";
     });
+    title = title.substring(0, title.length - 1);
     return title;
   }
 

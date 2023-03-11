@@ -91,6 +91,7 @@ export class DocumentaryCollection extends BasicStreamableCollection<Documentary
       if (genre.search(documentary.getGenre()) == -1)
         genre += documentary.getGenre() + " ";
     });
+    genre = genre.substring(0, genre.length - 1);
     return genre;
   }
 
@@ -103,6 +104,7 @@ export class DocumentaryCollection extends BasicStreamableCollection<Documentary
     this.collection.forEach((documentary) => {
       title += documentary.getTitle() + " ";
     });
+    title = title.substring(0, title.length - 1);
     return title;
   }
 
