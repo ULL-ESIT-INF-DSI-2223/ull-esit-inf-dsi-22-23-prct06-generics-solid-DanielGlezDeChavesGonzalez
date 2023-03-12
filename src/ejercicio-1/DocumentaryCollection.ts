@@ -121,3 +121,4 @@ export class DocumentaryCollection extends BasicStreamableCollection<Documentary
     return year;
   }
 }
+
